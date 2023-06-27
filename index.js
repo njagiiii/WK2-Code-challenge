@@ -1,6 +1,6 @@
 //fetch data from api
 
-  
+    document.addEventListener('DOMContentLoaded' ,() => {
     fetch("http://localhost:3000/characters")
      .then(res => res.json())
      .then( data => {
@@ -15,7 +15,7 @@
       const ul = document.getElementById('list')
 
       button.addEventListener('click', function click(){
-        const mapping = data.map(characters => {
+         data.map(characters=> {
           const li = document.createElement('li');
           li.innerText = characters.name;
           li.classList.add('animal-item');
@@ -41,7 +41,7 @@
             animalcontainer.classList.add('animal');
             const image = document.createElement('img');
               image.src = characters.image;
-              animalcontainer.appendChild(image);
+              animalcontainer.appendChild(image);m 
               li.appendChild(animalcontainer);
               selectedimage = image;
 
@@ -76,7 +76,7 @@
       });
      });
   
- 
+    });
 
  
 
